@@ -60,7 +60,7 @@ public class RootGenerator : MonoBehaviour
                 GameObject newObj = Instantiate(obj, new Vector3(x, y, 0), transform.rotation);
 
                 float rot = Mathf.Atan2(yAcc, xAcc) * 180 / Mathf.PI;
-                Debug.Log(rot);
+                /*Debug.Log(rot);*/
 
                 newObj.transform.Rotate(new Vector3(0, 0, 90 + rot));
 
