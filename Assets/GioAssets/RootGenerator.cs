@@ -9,9 +9,14 @@ public class RootGenerator : MonoBehaviour
 
     public GameObject obj;
     float y = 5f;
+    float yAcc = -0.1f;
     float x = 0f;
     float xAcc = 0f;
     private int tick = 0;
+    float xSpd = 0.01f;
+
+    bool generateRoot = true;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -30,30 +35,36 @@ public class RootGenerator : MonoBehaviour
     void FixedUpdate()
     {
         tick++;
-        
 
 
-        if (tick % 5 == 0)
+        if (generateRoot)
         {
-
-            // left
-            if (Input.GetKey(KeyCode.A))
+            if (tick % 5 == 0)
             {
-                xAcc -= 0.05f;
+
+                // left
+                if (Input.GetKey(KeyCode.A))
+                {
+                    xAcc -= xSpd;
+                }
+
+                // right
+                if (Input.GetKey(KeyCode.D))
+                {
+                    xAcc += xSpd;
+                }
+
+                x += xAcc;
+
+                y += yAcc;
+                GameObject newObj = Instantiate(obj, new Vector3(x, y, 0), transform.rotation);
+
+                float rot = Mathf.Atan2(yAcc, xAcc) * 180 / Mathf.PI;
+                Debug.Log(rot);
+
+                newObj.transform.Rotate(new Vector3(0, 0, 90 + rot));
+
             }
-
-            // right
-            if (Input.GetKey(KeyCode.D))
-            {
-                xAcc += 0.05f;
-            }
-
-            x += xAcc;
-
-            y -= 0.1f;
-            GameObject newObj = Instantiate(obj, new Vector3(x, y, 0), transform.rotation);
-            newObj.transform.Rotate(new Vector3(0, 0, xAcc * 360));
-
         }
 
 
