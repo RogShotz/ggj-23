@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f58cf2aaccbb4c440981bb876ee0870f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 3061540513529771798, guid: 2ba02fbd99b976e4db8d1b4fad34f572, type: 3}
+  root: {fileID: 3061540513529771798, guid: 2ba02fbd99b976e4db8d1b4fad34f572, type: 3}
+  gameStateController: {fileID: 2992599269995261362, guid: 86d8381b1b37d8140a910bbea05f5385, type: 3}
