@@ -8,7 +8,7 @@ public class RootGenerator : MonoBehaviour
 {
 
     public GameObject root;
-    float y = -0.5f;
+    float y = -4f;
     float yAcc = -0.1f;
     float x = 0f;
     float xAcc = 0f;
@@ -80,6 +80,6 @@ public class RootGenerator : MonoBehaviour
 
     // Returns the location of the last 
     public Vector2 GetPosition() {
-        return new Vector2(x, y);
+        return new Vector2(0, y);
     }
 }
