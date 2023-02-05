@@ -85,6 +85,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4.5
+  tower: {fileID: 2676949939263251041, guid: 228b6fc1b88321046bdd8143871b19dc, type: 3}
+  antiair: {fileID: 1749447840361371474, guid: ad3f9291e89dd884fa401386f6e48fbb, type: 3}
 --- !u!1 &4979577269840997708
 GameObject:
   m_ObjectHideFlags: 0

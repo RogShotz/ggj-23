@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerBehavior : MonoBehaviour
+public class AABehavior : MonoBehaviour
 {
     public ProjectileBehavior projectile;
     public Vector3 launchOffset;
@@ -11,8 +11,7 @@ public class TowerBehavior : MonoBehaviour
     void Start()
     {
         InvokeRepeating("Shoot", 2f, 1f);
-        launchOffset = new Vector3(transform.position.x + 0.5f, transform.position.y, transform.position.z); 
-        
+        launchOffset = new Vector3(transform.position.x + 0.4f, transform.position.y, transform.position.z);
     }
 
     // Update is called once per frame
@@ -25,4 +24,5 @@ public class TowerBehavior : MonoBehaviour
     {
         Instantiate(projectile, launchOffset, transform.rotation);
     }
+
 }
