@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GemBehavior : MonoBehaviour
 {
+    public int point = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class GemBehavior : MonoBehaviour
         if (other.CompareTag("Root"))
         {
             Destroy(gameObject);
-            Debug.Log("Gem Get");
+            Debug.Log(point + " point!");
         }
     }
 
