@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SmallEnemyMovement : MonoBehaviour
+public class EnemyBehavior : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public float health = 3f;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,11 @@ public class SmallEnemyMovement : MonoBehaviour
     {
         if (col.gameObject.tag.Equals("Projectile") == true)
         {
-            Destroy(gameObject);
+            health--;
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
 
     }
