@@ -14,6 +14,7 @@ public class RootGenerator : MonoBehaviour
     float xAcc = 0f;
     private int tick = 0;
     float xSpd = 0.01f;
+    public bool obstacleHit = false;
 
 
     public GameStateController gameStateController;
@@ -53,7 +54,7 @@ public class RootGenerator : MonoBehaviour
 
     void GenerateRoot(int tick) {
         // Generate root
-        if (tick % 5 == 0) {
+        if (tick % 5 == 0 && !obstacleHit) {
 
             // left
             if (Input.GetKey(KeyCode.A)) {
@@ -77,6 +78,15 @@ public class RootGenerator : MonoBehaviour
 
         }
     }
+
+    /*private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("obstacle hit");
+        if (collision.gameObject.tag.Equals("Obstacle") == true)
+        {
+            obstacleHit = true;
+        }
+    }*/
 
     // Returns the location of the last 
     public Vector2 GetPosition() {

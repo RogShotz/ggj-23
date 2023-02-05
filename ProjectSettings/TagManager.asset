@@ -8,6 +8,9 @@ TagManager:
   - Tree
   - Projectile
   - Gem
+  - Enemy
+  - Tower
+  - Obstacle
   layers:
   - Default
   - TransparentFX
