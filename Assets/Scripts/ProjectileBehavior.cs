@@ -26,7 +26,11 @@ public class ProjectileBehavior : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        Destroy(gameObject);       
+        if (!col.gameObject.tag.Equals("Tower") == true)
+        {
+            Destroy(gameObject);
+        }
+             
     }
 
 }
