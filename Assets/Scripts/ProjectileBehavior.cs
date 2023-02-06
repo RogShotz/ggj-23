@@ -21,6 +21,10 @@ public class ProjectileBehavior : MonoBehaviour
         {
             transform.position += transform.right * speed * Time.deltaTime;
         }
+        if (transform.position.x > 11)
+        {
+            Destroy(gameObject);
+        }
         
     }
 

@@ -12,7 +12,7 @@ public class TowerBehavior : MonoBehaviour
     void Start()
     {
         InvokeRepeating("Shoot", 2f, 1f);
-        launchOffset = new Vector3(transform.position.x + 0.5f, transform.position.y + 0.4f, transform.position.z); 
+        launchOffset = new Vector3(transform.position.x + 1f, transform.position.y + 0.4f, transform.position.z); 
         
     }
 
