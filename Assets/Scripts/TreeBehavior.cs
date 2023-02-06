@@ -5,6 +5,7 @@ using UnityEngine;
 public class TreeBehavior : MonoBehaviour
 {
     public static int lives = 10;
+    public static int points = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +35,16 @@ public class TreeBehavior : MonoBehaviour
     public void setLives(int val)
     {
         lives = val;
+    }
+
+    public int getPoints()
+    {
+        return points;
+    }
+
+    public void setPoints(int val)
+    {
+        points += val;
     }
 
 }

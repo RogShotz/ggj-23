@@ -8,6 +8,7 @@ public class TextManager : MonoBehaviour
 {
     private TreeBehavior tree;
     public TextMeshProUGUI livesRemaining;
+    public TextMeshProUGUI points;
 
     void Awake()
     {
@@ -24,5 +25,6 @@ public class TextManager : MonoBehaviour
     void Update()
     {
         livesRemaining.text = "Lives: " + tree.getLives().ToString();
+        points.text = "Points: " + tree.getPoints().ToString();
     }
 }
